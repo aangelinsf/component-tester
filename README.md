@@ -18,7 +18,7 @@ Download and unpack the zip archive. Use the following commands to:
 2. Start a Lando container for the project.
 3. Perform a system install using the profile included with the project. This enables the modules and imports 
 the configuration; it also imports some content using the [default_content](https://www.drupal.org/project/default_content).
-4. Import the custom blocks with the Structure Sync module's `import blocks` command (ib). Enter '1' (Full) when asked.
+4. Import the custom blocks with the Structure Sync module's `import blocks` command (ib). Enter '3' (Force) when asked.
 
 ```
 cd component-tester
