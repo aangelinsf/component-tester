@@ -1,0 +1,23 @@
+uuid: bd6c8142-4e01-43aa-a047-82e148a629d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+    - field.storage.block_content.field_integer_field
+id: block_content.basic.field_integer_field
+field_name: field_integer_field
+entity_type: block_content
+bundle: basic
+label: 'Integer Field'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

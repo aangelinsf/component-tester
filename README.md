@@ -29,9 +29,12 @@ lando drush ib
 Once the installation finishes, you can log in by visiting 
 http://component-tester.lndo.site/user/login and using "admin" / "password" as the credentials.
 
+The configuration sync directory is in web/profles/component_tester/config/sync.
+
 ## Exporting blocks
 
-If you want to export blocks, use the Structure Sync export-block drush command:
+If you want to export blocks, use the Structure Sync export-block drush command then export to the sync directory:
 ```
 lando drush eb
+lando drush cex
 ```

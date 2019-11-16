@@ -1,0 +1,18 @@
+taxonomies:
+  tags: {  }
+blocks:
+  -
+    info: 'Test Block 1'
+    langcode: en
+    uuid: e9096f07-26cf-40e4-8b51-8f29d399de9b
+    bundle: basic
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        value: "<p>Quick brown fox.</p>\r\n"
+        summary: ''
+        format: basic_html
+      field_integer_field:
+        value: '100'
+menus: {  }
