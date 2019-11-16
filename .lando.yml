@@ -1,0 +1,26 @@
+name: component-tester
+recipe: drupal8
+config:
+  webroot: web
+  php: '7.3'
+  xdebug: false
+excludes:
+  - vendor
+  - modules/contrib
+  - web/core
+services:
+  appserver:
+    overrides:
+      environment:
+        PHP_IDE_CONFIG: "serverName=component-tester.lndo.site"
+        PWD: /app
+  database:
+    portforward: 3601
+tooling:
+  drush:
+    cmd: /app/vendor/bin/drush
+  drupal:
+    cmd: /app/vendor/bin/drupal
+  phpunit:
+    service: appserver
+    cmd: /app/vendor/bin/phpunit
