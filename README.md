@@ -16,18 +16,14 @@ sites/default/settings.php file.
 Download and unpack the zip archive. Use the following commands to:
 1. Move into the project directory 
 2. Start a Lando container for the project.
-3. Run composer to download the contrib modules and libraries for the vendor directory.
-4. (optional) Rebuild the container to exclude certain directories; speeds up Lando. 
-5. Perform a system install using the profile included with the project. This enables the modules and imports 
+3. Perform a system install using the profile included with the project. This enables the modules and imports 
 the configuration; it also imports some content using the [default_content](https://www.drupal.org/project/default_content).
-6. Import the custom blocks with the Structure Sync module's `import blocks` command (ib). Enter '1' (Full) when asked.
+4. Import the custom blocks with the Structure Sync module's `import blocks` command (ib). Enter '1' (Full) when asked.
 
 ```
 cd component-tester
 lando start
-lando composer update
-lando rebuild
-lando drush si component_tester --yes --db-url="mysql://drupal8:drupal8@database/drupal8"  --account-name=admin --account-pass=password
+lando drush si component_tester --existing-config --yes --db-url="mysql://drupal8:drupal8@database/drupal8"  --account-name=admin --account-pass=password
 lando drush ib
 ```
 Once the installation finishes, you can log in by visiting 
